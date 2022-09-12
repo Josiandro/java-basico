@@ -1,2 +1,2 @@
-# java basico
- Curso básico de Java do Curso em Vídeo
+# Java básico
+ Treinamento Rech: Curso básico de Java do Curso em Vídeo
