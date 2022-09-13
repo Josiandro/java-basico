@@ -1,0 +1,27 @@
+WORA - Write Once Run Anywhere (Escreva uma vez e execute em qualquer lugar)
+
+JRE - Java Runtime Environment (Ambiente de execução Java)
+
+    JVM - Máquina virtual Java
+        - Loader/Verificador
+            - Loader é a parte interna da JVM que vai carregar o bytecode na memória da máquina virtual
+            - Verificador vai verificar se o código pode ser executado sem problema algum
+        - Interpretador/Gerenciador
+            - Interpretador vai pegar o código em bytecode e transformar para o código da linguagem nativa da máquina em questão, por exemplo Windows
+            - Gerenciador de memória vai tratar como os códigos e variáveis serão tratados na memória da JVM
+        - Compilador JIT 
+            - JIT Just in time (tradução em tempo real) considera algo importante no código e compila antes
+
+    Bibliotecas - APIs que podem ser usadas dentro do programa
+
+JDK - Java Development Kit (Kit de desenvolvimento Java)
+
+    JRE - Já vem com todos os componentes da JRE
+    JavaLang - Liguagem Java
+    JavaTools - Conjunto de ferramentas
+        - JavaC (Compilador Java)
+        - Debuger para verificar/testar o programa em tempo real
+        - APIs para desenvolvimento como JavaFX, por exemplo
+    IDE (Ambiente de desenvolvimento) - Não vem junto como o JDK, mas pode ser adicionado a ele 
+
+
