@@ -1,0 +1,11 @@
+SE - Standard Edition
+
+    - Aplicações com janelas ou controles de interface gráfica
+
+EE - Enterprise Edition
+
+    - Aplicações com janelas usando acesso remoto e acesso a bancos gigantes
+
+ME - Micro Edition
+
+    - Aplicações para celulares, dispositivos portáteis

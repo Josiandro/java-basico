@@ -1,0 +1,10 @@
+IDE - Integrated Development Environment (Ambiente Integrado de Desenvolvimento)
+
+Vantagens
+    - Editor Completo (Colorização de códigos, por exemplo)
+    - Compilador Linker Debugger
+    - Gerador de Código
+    - Ambiente de Testes
+    - Distribuição Simplificada
+
+RAD - Rapid Application Development (Desenvolvimento rápido de aplicações)
