@@ -1,0 +1,21 @@
+Compilador
+    - Transforma código fonte em código objeto
+
+Linker/Montador/Assembler
+    - Transforma o código objeto em código executável
+
+Interpretador
+    - Transforma de forma direta, de código fonte para código executável
+
+Diferenças entre Compilador e Interpretador
+
+    Compilador
+        - Analisa todo o programa antes, verifica se está tudo certo e depois traduz para que então o Linker possa gerar o código executável. Esse código consome MAIS MEMÓRIA, pois o código todo estará na memória do computador
+        - Como o Compilador já compilou todo o programa, ele leva MENOS TEMPO para executar
+
+    Interpretador
+        - Vai pegando cada instrução e colocando na memória, depois apaga da memória e vai colocando outras instruções. Consome MENOS MEMÓRIA.
+        - Como o Interpretador precisa traduzir cada uma das linhas, ele leva MAIS TEMPO para executar
+        
+
+    

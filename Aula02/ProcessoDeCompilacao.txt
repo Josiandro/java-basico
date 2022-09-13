@@ -1,0 +1,16 @@
+1- CÓDIGO FONTE (Código de alto nível)
+2 - COMPILADOR - Vai analisar o código e gerar instruções únicas em uma linguagem chamada de Código Relocável
+3 - CÓDIGO RELOCÁVEL - Gera várias instruções. Tem as variáveis, por exemplo, mas ainda não tem os locais delas na memória, precisa passar por um Montador
+4 - MONTADOR - Vai pegar as variáveis e demais partes do código e colocar em posições que o programa precisa para rodar
+5 - CÓDIGO OBJETO - Código executável, absoluto, linguagem de máquina
+
+Obs: O processo de compilação do Java, não gera código objeto. Ele gera bytecode que é compreendido por uma máquina vitual Java (JVM)
+
+----------------------------------------------------------------
+
+"Um Programa pode existir em três níveis: fonte (simbólico), relocável e objeto (executável)."
+"O Compilador vai verificar a sintaxe dos comandos, buscar por erros, realizar a tradução do código simbólico em múltiplas instruções essenciais."
+
+"O Montador ou Assembler realiza cálculos de endereçamento e transforma as instruções relocáveis em linguagem de máquina."
+
+
