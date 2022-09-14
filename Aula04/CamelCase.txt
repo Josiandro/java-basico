@@ -1,0 +1,19 @@
+- Sempre que tiver a primeira letra maiúscula, é Classe ou Interface.
+
+    MinhasClasse / AlunosCursoEmVideo
+
+- Sempre que tiver a primeira letra minúscula, pode ser um Atributo, Variável ou Método.
+
+    meuAtributo / nomeAluno
+    minhaVariavel / mediaPrimeiroBimestre
+    meuMetodo / lancarNotaAluno
+
+- Somente com letras minúsculas, é o nome de um Pacote.
+
+    meu_pacote / alunoscursoemvideo 
+
+- Todas as letras maiúsculas, é o nome de uma Constante.
+
+    MINHA_CONSTANTE / VALOR_DE_PI
+    
+
