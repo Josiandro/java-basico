@@ -4,6 +4,8 @@
  */
 package classes;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author josia
@@ -15,6 +17,9 @@ public class TelaIdade extends javax.swing.JFrame {
      */
     public TelaIdade() {
         initComponents();
+        
+        int atual = LocalDate.now().getYear();
+        lblTeste.setText(Integer.toString(atual));
     }
 
     /**
@@ -32,6 +37,8 @@ public class TelaIdade extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         lblIdade = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        lblTeste = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,6 +62,10 @@ public class TelaIdade extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.jpg"))); // NOI18N
 
+        lblTeste.setText("---");
+
+        jLabel3.setText("Ano Atual:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -72,7 +83,11 @@ public class TelaIdade extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(lblIdade))
+                                .addComponent(lblIdade)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblTeste))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
@@ -96,16 +111,20 @@ public class TelaIdade extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(lblIdade))
+                    .addComponent(lblIdade)
+                    .addComponent(lblTeste)
+                    .addComponent(jLabel3))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
+        
+        int aa = LocalDate.now().getYear();
         int an = Integer.parseInt(txtAn.getValue().toString());
-        int id = 2022 - an;
+        int id = aa - an;
         
         lblIdade.setText(Integer.toString(id));
     }//GEN-LAST:event_btnCalcActionPerformed
@@ -149,8 +168,10 @@ public class TelaIdade extends javax.swing.JFrame {
     private javax.swing.JButton btnCalc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblIdade;
+    private javax.swing.JLabel lblTeste;
     private javax.swing.JSpinner txtAn;
     // End of variables declaration//GEN-END:variables
 }
