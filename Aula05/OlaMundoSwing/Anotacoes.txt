@@ -13,4 +13,8 @@ Criando novo projeto JavaFx
     - Precisa informar o nome da classe e o nome do pacote já é criado automaticamente
     - Duplo clique no arquivo FXML abre o editor da interface
 
+Gerar "executável" do programa
+    - Clicar no martelo e vassoura ao lado do botão play
+    - Será criado o arquivo JAR dentro da pasta Dist
 
+    
