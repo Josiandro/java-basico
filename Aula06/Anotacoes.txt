@@ -58,6 +58,17 @@ Float sal = new Float(1825.54);
 Character letra = new Character('G');
 Boolean casado = new Boolean(false);
 
+-------------------------------------------------------
 
+Métodos acessores
+
+Nome: lbrResultado
+Text: 0
+
+Método Getter (Usado para pegar um texto)
+lbrResultado.getText()
+
+Método Setter (Usado para setar um texto)
+lbrResultado.setText()
 
 
