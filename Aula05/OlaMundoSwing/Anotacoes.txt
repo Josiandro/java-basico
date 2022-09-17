@@ -8,3 +8,9 @@ Redefinir janelas do Netbeans
     - Window
         - Reset Windows
 
+Criando novo projeto JavaFx
+    - Cria-se o novo projeto JavaFX > JavaFX XML
+    - Precisa informar o nome da classe e o nome do pacote já é criado automaticamente
+    - Duplo clique no arquivo FXML abre o editor da interface
+
+
