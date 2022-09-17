@@ -1,0 +1,10 @@
+Criando novo projeto Swing
+    - É feita a criação do novo projeto, porém desmarcada a opção de criar a classe principal.
+    - Será criado o projeto com o pacote sem nenhuma classe.
+    - Depois, é criada uma classe para esse pacote do tipo Swing JFrame Form. (É preciso dar o nome para classe e para o pacote)
+    - Ao executar o programa, o Netbens vai perguntar qual será a classe principal, então será a classe criad com Swing.
+
+Redefinir janelas do Netbeans
+    - Window
+        - Reset Windows
+
