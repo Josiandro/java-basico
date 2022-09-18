@@ -13,8 +13,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
     /**
      * Creates new form TelaCalculadora
      */
-    public TelaCalculadora() {
+    public TelaCalculadora() { //Construtor
         initComponents();
+        panCalc.setVisible(false);
     }
 
     /**
@@ -31,18 +32,20 @@ public class TelaCalculadora extends javax.swing.JFrame {
         txtValor = new javax.swing.JSpinner();
         btnCalc = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        panCalc = new javax.swing.JPanel();
         lblRes = new javax.swing.JLabel();
-        lblCubo = new javax.swing.JLabel();
-        lblRaiz = new javax.swing.JLabel();
-        lblRaizCubica = new javax.swing.JLabel();
-        lblAbsoluto = new javax.swing.JLabel();
         lblResultResto = new javax.swing.JLabel();
+        lblCubo = new javax.swing.JLabel();
         lblResultCubo = new javax.swing.JLabel();
+        lblRaiz = new javax.swing.JLabel();
         lblResultRaiz = new javax.swing.JLabel();
+        lblRaizCubica = new javax.swing.JLabel();
         lblResultCubica = new javax.swing.JLabel();
+        lblAbsoluto = new javax.swing.JLabel();
         lblResultAbsoluto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel1.setText("Super Calculadora");
@@ -61,115 +64,134 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/calc.jpg"))); // NOI18N
 
-        lblRes.setText("jLabel4");
+        lblRes.setText("Resto da Divisão por 2");
 
-        lblCubo.setText("jLabel5");
-
-        lblRaiz.setText("jLabel6");
-
-        lblRaizCubica.setText("jLabel7");
-
-        lblAbsoluto.setText("jLabel8");
-
-        lblResultResto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblResultResto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblResultResto.setForeground(new java.awt.Color(0, 51, 255));
-        lblResultResto.setText("jLabel4");
+        lblResultResto.setText("0");
 
-        lblResultCubo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblCubo.setText("Elevado ao Cubo");
+
+        lblResultCubo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblResultCubo.setForeground(new java.awt.Color(0, 51, 255));
-        lblResultCubo.setText("jLabel5");
+        lblResultCubo.setText("0");
 
-        lblResultRaiz.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblRaiz.setText("Raiz Quadrada");
+
+        lblResultRaiz.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblResultRaiz.setForeground(new java.awt.Color(0, 51, 255));
-        lblResultRaiz.setText("jLabel6");
+        lblResultRaiz.setText("0");
 
-        lblResultCubica.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblRaizCubica.setText("Raiz Cúbica");
+
+        lblResultCubica.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblResultCubica.setForeground(new java.awt.Color(0, 51, 255));
-        lblResultCubica.setText("jLabel7");
+        lblResultCubica.setText("0");
 
-        lblResultAbsoluto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblAbsoluto.setText("Valor Absoluto");
+
+        lblResultAbsoluto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblResultAbsoluto.setForeground(new java.awt.Color(0, 51, 255));
-        lblResultAbsoluto.setText("jLabel8");
+        lblResultAbsoluto.setText("0");
+
+        javax.swing.GroupLayout panCalcLayout = new javax.swing.GroupLayout(panCalc);
+        panCalc.setLayout(panCalcLayout);
+        panCalcLayout.setHorizontalGroup(
+            panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCalcLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panCalcLayout.createSequentialGroup()
+                        .addComponent(lblRes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblResultResto))
+                    .addGroup(panCalcLayout.createSequentialGroup()
+                        .addComponent(lblCubo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblResultCubo))
+                    .addGroup(panCalcLayout.createSequentialGroup()
+                        .addComponent(lblRaiz)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblResultRaiz))
+                    .addGroup(panCalcLayout.createSequentialGroup()
+                        .addComponent(lblRaizCubica)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblResultCubica))
+                    .addGroup(panCalcLayout.createSequentialGroup()
+                        .addComponent(lblAbsoluto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblResultAbsoluto)))
+                .addContainerGap())
+        );
+        panCalcLayout.setVerticalGroup(
+            panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCalcLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRes)
+                    .addComponent(lblResultResto))
+                .addGap(18, 18, 18)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCubo)
+                    .addComponent(lblResultCubo))
+                .addGap(18, 18, 18)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRaiz)
+                    .addComponent(lblResultRaiz))
+                .addGap(18, 18, 18)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRaizCubica)
+                    .addComponent(lblResultCubica))
+                .addGap(18, 18, 18)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAbsoluto)
+                    .addComponent(lblResultAbsoluto))
+                .addContainerGap(87, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(57, 57, 57)
-                                .addComponent(btnCalc, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(151, 151, 151))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblRes)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblResultResto))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblCubo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblResultCubo))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblAbsoluto)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblResultAbsoluto))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblRaiz)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblResultRaiz))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblRaizCubica)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblResultCubica)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)))
-                .addContainerGap())
+                        .addGap(49, 49, 49)
+                        .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(178, 178, 178))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(panCalc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(67, 67, 67)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCalc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(47, 47, 47))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(229, 229, 229)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalc))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(btnCalc))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(51, 51, 51)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblRes)
-                            .addComponent(lblResultResto))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblCubo)
-                            .addComponent(lblResultCubo))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblRaiz)
-                            .addComponent(lblResultRaiz))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblRaizCubica)
-                            .addComponent(lblResultCubica))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblAbsoluto)
-                            .addComponent(lblResultAbsoluto))
-                        .addGap(77, 77, 77)))
-                .addContainerGap())
+                            .addComponent(jLabel2)
+                            .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -177,26 +199,19 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
         
-        int valor    = Integer.parseInt(txtValor.getValue().toString());
-        int resto    = valor % 2;
-        float cubo   = (float) Math.pow(valor, 3);
-        float raizq  = (float) Math.sqrt(valor);
-        float raizc  = (float) Math.cbrt(valor);
-        int absoluto = Math.abs(valor);
+        panCalc.setVisible(true);
         
-        lblRes.setText("Resto da Divisão por 2");
-        lblResultResto.setText(Integer.toString(resto));
+        int valor     = Integer.parseInt(txtValor.getValue().toString());
+        int resto     = valor % 2;
+        double cubo   = Math.pow(valor, 3);
+        double raizq  = Math.sqrt(valor);
+        double raizc  = Math.cbrt(valor);
+        int absoluto  = Math.abs(valor);
         
-        lblCubo.setText("Elevado ao Cubo");
-        lblResultCubo.setText(Float.toString(cubo));
-        
-        lblRaiz.setText("Raiz Quadrada");
-        lblResultRaiz.setText(Float.toString(raizq));
-        
-        lblRaizCubica.setText("Raiz Cúbica");
-        lblResultCubica.setText(Float.toString(raizc));
-        
-        lblAbsoluto.setText("Valor Absoluto");
+        lblResultResto.setText(Integer.toString(resto));        
+        lblResultCubo.setText(Double.toString(cubo));        
+        lblResultRaiz.setText(String.format("%.2f",raizq));        
+        lblResultCubica.setText(String.format("%.2f", raizc));        
         lblResultAbsoluto.setText(Integer.toString(absoluto));
         
     }//GEN-LAST:event_btnCalcActionPerformed
@@ -251,6 +266,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
     private javax.swing.JLabel lblResultCubo;
     private javax.swing.JLabel lblResultRaiz;
     private javax.swing.JLabel lblResultResto;
+    private javax.swing.JPanel panCalc;
     private javax.swing.JSpinner txtValor;
     // End of variables declaration//GEN-END:variables
 }
