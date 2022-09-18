@@ -1,0 +1,43 @@
+Operador Ternário
+
+Visualg
+
+Se (n1 > n2) entao
+    maior <- n1
+Senao
+    maior <- n2
+FimSe
+
+Java
+
+maior = n1>n2?n1:n2;
+
+Se n1 foi maior que n2, recebe o que está antes dos dois ponto (:), se for menor, recebe o que está depois.
+
+Obs: Isso só funciona para atribuir valor a uma mesma variável
+
+-------------------------------------------
+
+Operadores Relacionais
+
+==  Igual a         9 == 8  false
+!=  Diferente de    4 != 5  true
+
+Obs: Quando for comparar objetos e classes invólucro, no lugar do igual (==) é usado o equals.
+
+n1.equals(n2)
+
+-------------------------------------------
+
+Operadores Lógicos
+
+&& -> e 
+|| -> ou
+^  -> xou
+!  -> não
+
+-------------------------------------------
+
+Expressões Lógicas Compostas
+
+opcional = ((idade >= 16 && idade < 18) || (idade > 70))?"OPCIONAL":"OBRIGATÓRIO";
