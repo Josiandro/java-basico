@@ -4,6 +4,7 @@
  */
 package classes;
 
+// Importação da biblioteca/pacote LocalDate
 import java.time.LocalDate;
 
 /**
@@ -18,7 +19,9 @@ public class TelaIdade extends javax.swing.JFrame {
     public TelaIdade() {
         initComponents();
         
+        // Inicia o programa já passando o ano atual para variável "atual"
         int atual = LocalDate.now().getYear();
+        // Depois, mostra o ano atual no lblTeste
         lblTeste.setText(Integer.toString(atual));
     }
 
@@ -120,12 +123,15 @@ public class TelaIdade extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
+    // Ação do clique no botão btnCalc
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
-        
+        // Variável "aa" recebe o ano atual
         int aa = LocalDate.now().getYear();
+        // Variável "an" pega o "valor" ano de nascimento de txtAn, passa para String e depois converte tudo para Integer
         int an = Integer.parseInt(txtAn.getValue().toString());
+        // Variável "id" recebe a idade calculada
         int id = aa - an;
-        
+        // lbtIdade mostra a idade calculada, mas antes, converte de Integer para String
         lblIdade.setText(Integer.toString(id));
     }//GEN-LAST:event_btnCalcActionPerformed
 

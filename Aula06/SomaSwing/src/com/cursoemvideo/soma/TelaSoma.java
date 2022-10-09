@@ -78,12 +78,16 @@ public class TelaSoma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ação do clique no botão btnSoma
     private void btnSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSomaActionPerformed
+        // Variável "n1" e "n2" pegando os textos das caixas de texto e convertendo para Integer
         int n1 = Integer.parseInt(txtN1.getText());
         int n2 = Integer.parseInt(txtN2.getText());
+        // Variável "s" recebendo a soma
         int s = n1 + n2;
-        
+        // lblSoma mostrando o valor de "s", mas antes, converte de para String com o método toString
         lblSoma.setText(Integer.toString(s));
+        // txtN1 e 2 recebem vazio, para limpar os dados inseridos antes
         txtN1.setText("");
         txtN2.setText("");
     }//GEN-LAST:event_btnSomaActionPerformed
