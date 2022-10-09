@@ -4,6 +4,7 @@
  */
 package cursoemvideo;
 
+// Importação do pacote/classe Locale
 import java.util.Locale;
 
 /**
@@ -84,8 +85,11 @@ public class TelaIdioma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ação do clique no botão btnClick
     private void btnClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClickActionPerformed
+        // loc recebe a localização padrão do sistema
         Locale loc = Locale.getDefault();
+        // lblIdioma exibe o idioma que pegou através do métodos getDisplayLanguage
         lblIdioma.setText(loc.getDisplayLanguage());
     }//GEN-LAST:event_btnClickActionPerformed
 

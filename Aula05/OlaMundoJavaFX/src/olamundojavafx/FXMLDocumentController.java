@@ -4,7 +4,7 @@
  */
 package olamundojavafx;
 
-// Importações de pacotes
+// Importação dos pacotes necessários
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -13,15 +13,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-// Implements está fazendo uma interface, será visto mais adiante
+// Implements está fazendo uma interface, será visto em outro curso
 public class FXMLDocumentController implements Initializable {
     
-    // Comandos para adição de controles
+    // Comandos para adição dos controles, botão e label nesse caso
     @FXML
     private Label lblMensagem;
     private Button btnClick;
     
-    //Código do evento
+    //Código do evento de clique no botão
     @FXML
     private void clicouBotao(ActionEvent event) {
         lblMensagem.setText("Olá, Mundo!");

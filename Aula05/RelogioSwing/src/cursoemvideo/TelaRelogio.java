@@ -4,6 +4,7 @@
  */
 package cursoemvideo;
 
+// Importação da biblioteca java.util.Date
 import java.util.Date;
 
 public class TelaRelogio extends javax.swing.JFrame {
@@ -80,8 +81,11 @@ public class TelaRelogio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Evento de clique no botão btnHora
     private void btnHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHoraActionPerformed
+        // Criação do objeto relógio usando classe Date
         Date relogio = new Date();
+        // lblHora mostra a data/hora do sistema que foi pega pelo objeto "relógio" e paga mostrar, converte para String com o método toString
         lblHora.setText(relogio.toString());
     }//GEN-LAST:event_btnHoraActionPerformed
 

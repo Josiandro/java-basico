@@ -4,7 +4,9 @@
  */
 package cursoemvideo;
 
+// Importação da biblioteca/pacote Dimension
 import java.awt.Dimension;
+// Importação da biblioteca/pacote Toolkit
 import java.awt.Toolkit;
 
 /**
@@ -85,10 +87,14 @@ public class TelaResolucao extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ação do clique no botão btnClick
     private void btnClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClickActionPerformed
+        // tk pega o kit de ferramentas padrão
         Toolkit tk = Toolkit.getDefaultToolkit();
+        // d pega o tamanho da tela com o método getScreenSize usado em tk
         Dimension d = tk.getScreenSize();
-        lblResolucao.setText(d.width + " x " + d.height);
+        // lblResolucao mostra a largura e altura pega com o métodos
+        lblResolucao.setText(d.width + " x " + d.height + " px");
     }//GEN-LAST:event_btnClickActionPerformed
 
     /**

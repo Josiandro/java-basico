@@ -4,7 +4,7 @@
  */
 package cursoemvideo.olamundo;
 
-// A classe OlaMundoJava está herdando tudo de JFram. Este é o conceito de Herança (extends)
+// A classe OlaMundoJava está herdando tudo de JFrame. Este é o conceito de Herança (extends)
 public class OlaMundoJava extends javax.swing.JFrame {
 
     /**
@@ -67,9 +67,10 @@ public class OlaMundoJava extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    // btnClickActionPerformed é um evento que está sendo aplicado
+    // Evento que está sendo feito ao clicar no botão btnClick
     private void btnClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClickActionPerformed
-        lblMensagem.setText("Olá, Mundo!"); //lblMensagem está recebendo o texto ("Olá, Mundo!"), setText é um método do objeto
+        // lblMensagem mostra na tela o texto, setText é um método do objeto
+        lblMensagem.setText("Olá, Mundo!");
     }//GEN-LAST:event_btnClickActionPerformed
 
     /**
@@ -114,6 +115,6 @@ public class OlaMundoJava extends javax.swing.JFrame {
 }
 
 /*
- * O botão e o label são privados, ou seja, pertecem apenas ao objeto, não podem ser usados por outro.
+ * O botão e o label são privados (private), ou seja, pertecem apenas ao objeto, não podem ser usados por outro
  * Este é o conceito de encapsulamento.
  */
