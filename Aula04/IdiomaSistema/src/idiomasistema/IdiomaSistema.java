@@ -4,13 +4,15 @@
  */
 package idiomasistema;
 
+// Importação da biblioteca/pacote java.util.Locale (necessária para o uso da classe Locale)
 import java.util.Locale;
 
 public class IdiomaSistema {
 
     public static void main(String[] args) {
-        Locale loc = Locale.getDefault(); // Obtem a localização padrão que está na JVM
-        System.out.println("Seu sistema está em " + loc.getDisplayLanguage()); //Devolve o idioma da localização padrão
-    }
-    
+        // Criação do objeto "loc" usando a clsse Locale, ele pega o idioma padrão da JVM
+        Locale loc = Locale.getDefault();
+        // Imprime na tela a linguagem padrão do sistema, pega através do método getDisplayLanguage
+        System.out.println("Seu sistema está em " + loc.getDisplayLanguage());
+    }    
 }

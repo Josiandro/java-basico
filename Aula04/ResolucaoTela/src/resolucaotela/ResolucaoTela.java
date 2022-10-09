@@ -4,15 +4,19 @@
  */
 package resolucaotela;
 
+// Pacote/biblioteca para pegar as dimensões do monitor, por exemplo
 import java.awt.Dimension;
+// Pacote/biblioteca para pegar o kit de ferramentas padrão
 import java.awt.Toolkit;
 
 public class ResolucaoTela {
 
     public static void main(String[] args) {
-        Toolkit tk = Toolkit.getDefaultToolkit(); //Obtem o kit de ferramentas padrão
-        Dimension d = tk.getScreenSize(); //Pega a largura e altura de um "componente", neste caso o Toolkit
-        System.out.println("Sua tela tem resolução " + d.width + " x " + d.height); //Devolve a largura e altura pega no Toolkit
-    }
-    
+        // Carrega para "tk" o kit de ferramentas padrão
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        // "d" recebe o tamanho da tela usando o método .getScreeenSize()
+        Dimension d = tk.getScreenSize();
+        // Imprime na tela a largura e altura do monitor, "d" (Dimension) recebeu o conteúdo do "tk" (Toolkit) e depois usou dois métodos para pegar largura e altura
+        System.out.println("Sua tela tem a resolução " + d.width + " x " + d.height + " px");
+    }    
 }

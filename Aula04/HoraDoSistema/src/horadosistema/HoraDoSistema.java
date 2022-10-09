@@ -4,14 +4,17 @@
  */
 package horadosistema;
 
-import java.util.Date; //Importação de componente necessário para uso da classe Date
+// Importação da biblioteca/pacote java.util.Date (necessária para o uso da classe Date)
+import java.util.Date;
 
 public class HoraDoSistema {
 
     public static void main(String[] args) {
-        Date relogio = new Date(); //Criação do objeto relógio (sempre que tiver new, é objeto)
+        // Criação do objeto relógio usando a classe Date() que é nativa do Java (sempre que tiver "new" é um objeto)
+        Date relogio = new Date();
+        // System.out.println escreve na tela e salta para a próxima linha
         System.out.println("A hora do sistema é");
-        System.out.println(relogio.toString()); //Método toString convertendo a saída de Date para String
-    }
-    
+        // toString() é um método da classe relógio, que transforma a saída em uma String
+        System.out.println(relogio.toString());
+    }    
 }
