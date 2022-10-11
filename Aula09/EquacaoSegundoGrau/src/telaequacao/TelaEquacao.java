@@ -15,7 +15,7 @@ public class TelaEquacao extends javax.swing.JFrame {
      */
     public TelaEquacao() {
         initComponents();
-        
+        // panResultado nasce como invisível 
         panResultado.setVisible(false);
     }
 
@@ -222,36 +222,38 @@ public class TelaEquacao extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações ao mudar o valor do txtA
     private void txtAStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_txtAStateChanged
-        // TODO add your handling code here:
+        // lblA exibe o valor de txtA convertido para String
         lblA.setText(txtA.getValue().toString());
     }//GEN-LAST:event_txtAStateChanged
-
+    // Ações ao mudar o valor do txtB
     private void txtBStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_txtBStateChanged
-        // TODO add your handling code here:
+        // lblB exibe o valor de txtB convertido para String
         lblB.setText(txtB.getValue().toString());
     }//GEN-LAST:event_txtBStateChanged
-
+    // Ações ao mudar o valor do txtC
     private void txtCStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_txtCStateChanged
-        // TODO add your handling code here:
+        // lblC exibe o valor de txtC convertido para String
         lblC.setText(txtC.getValue().toString());
     }//GEN-LAST:event_txtCStateChanged
-
+    // Ações ao clique no botão btnCalc
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
-        // TODO add your handling code here:
+        // Variáveis recebem os valores dos txtA, B e C, convertem para String e depois para inteiro
         int a = Integer.parseInt(txtA.getValue().toString());
         int b = Integer.parseInt(txtB.getValue().toString());
         int c = Integer.parseInt(txtC.getValue().toString());
-        
+        // Cálculo da equação de 2º grau usando a classe Math com método pow para exponenciação
         double d = Math.pow(b, 2) - 4 * a * c;
+        // lblDelta exibe o resultado formando a saída
         lblDelta.setText(String.format("%.1f", d));
-        
+        // Testa de d é menor que 0
         if (d < 0) {
             lblRaiz.setText("Não existem raízes Reais");
         } else {
             lblRaiz.setText("Existem raízes Reais");
         }
-        
+        // panResultado se torna visível na tela.
         panResultado.setVisible(true);
     }//GEN-LAST:event_btnCalcActionPerformed
 

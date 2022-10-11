@@ -81,9 +81,12 @@ public class TelaParImpar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações do clique no botão btnVerificar
     private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
-        // TODO add your handling code here:
+        // Variável "v" recebe o valor do txtValor convertido para inteiro
         int v = Integer.parseInt(txtValor.getText());
+        
+        // Teste condicional para ver se o resto da divisão é igual a 0 ou não
         if (v%2==0) {
             lblResultado.setText("PAR");
         } else {
