@@ -15,7 +15,7 @@ public class TelaTriangulo extends javax.swing.JFrame {
      */
     public TelaTriangulo() {
         initComponents();
-        
+        // panRespota inicia invisível
         panResposta.setVisible(false);
     }
 
@@ -197,14 +197,17 @@ public class TelaTriangulo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações do clique no botão btnVerificar
     private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
-        // TODO add your handling code here:
+        // Variáveis receber o valor do Slider (já é int, então não precisa converter)
         int a = sliA.getValue();
         int b = sliB.getValue();
         int c = sliC.getValue();
         
+        // Teste condicional para ver se com esses valores, é possível forma um triângulo
         if (a<b+c && b<a+c && c<a+b) {
             lblStatus.setText("Formam um Triângulo");
+            // Teste condicional para ver qual tipo de triângulo pode ser formado
             if(a==b && b==c) {
                 lblTipo.setText("Equilátero");
             } else if (a!=b && b!=c && a!=c) {
@@ -216,22 +219,23 @@ public class TelaTriangulo extends javax.swing.JFrame {
             lblStatus.setText("Não formam um Triângulo");
             lblTipo.setText("----");
         }
-        
+        // panResposta passa a ser visível
         panResposta.setVisible(true);
     }//GEN-LAST:event_btnVerificarActionPerformed
 
+    // Ação ao alterar o sliA
     private void sliAStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliAStateChanged
-        // TODO add your handling code here:        
+        //lblA exibe o valor do sliA após converte de inteiro para String     
         lblA.setText(Integer.toString(sliA.getValue()));
     }//GEN-LAST:event_sliAStateChanged
-
+    // Ação ao alterar o sliB
     private void sliBStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliBStateChanged
-        // TODO add your handling code here:
+        //lblB exibe o valor do sliB após converte de inteiro para String
         lblB.setText(Integer.toString(sliB.getValue()));
     }//GEN-LAST:event_sliBStateChanged
-
+    // Ação ao alterar o sliC
     private void sliCStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliCStateChanged
-        // TODO add your handling code here:
+        //lblC exibe o valor do sliC após converte de inteiro para String
         lblC.setText(Integer.toString(sliC.getValue()));
     }//GEN-LAST:event_sliCStateChanged
 

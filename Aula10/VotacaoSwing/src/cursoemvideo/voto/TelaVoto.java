@@ -97,13 +97,14 @@ public class TelaVoto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações do clique no botão btnVoto
     private void btnVotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVotoActionPerformed
-        // TODO add your handling code here:
+        // Variável "a" recebe o valor de txtAno convertido para inteiro
         int a = Integer.parseInt(txtAno.getText());
         int i = 2022 - a;
-        
+        // lblIdade exibe o valor de i, depois de converter de inteiro para String
         lblIdade.setText(Integer.toString(i));
-        
+        // Teste condicional para ver se não vota, voto obrigatório ou voto opcional
         if (i < 16) {
             lblR.setText("Não Vota!");
         } else {
