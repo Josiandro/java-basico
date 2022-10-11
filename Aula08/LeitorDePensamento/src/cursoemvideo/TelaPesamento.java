@@ -4,6 +4,7 @@
  */
 package cursoemvideo;
 
+// Importação de pacote/biblioteca para trabalhar com fontes
 import java.awt.Font;
 
 /**
@@ -17,7 +18,7 @@ public class TelaPesamento extends javax.swing.JFrame {
      */
     public TelaPesamento() {
         initComponents();
-        
+        // Iniciando o programa já exibindo uma mensagem no balão (o Java aceita html)
         lblBalao.setText("<html>Estou pensando em um número entre <b>1 e 5</b>. Tente adivinhar que valor é esse.<html>");
     }
 
@@ -71,15 +72,19 @@ public class TelaPesamento extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações de clique no botão btnPalpite
     private void btnPalpiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPalpiteActionPerformed
         // TODO add your handling code here:
         
+        // Variável "aleatorio" recebe um valor entre 5 e 1
         double aleatorio = 1 + Math.random() * (6-1);
+        // Variável "numero" recebe o valor da variável "aleatorio", usando typecast para forçar o tipo int
         int numero = (int) aleatorio;
-        
+        // Variável "palpite" recebe o valor digitado no txtValor, depois de passar para String e converter para Integer
         int palpite = Integer.parseInt(txtValor.getValue().toString());
+        // Variável "resposta" recebe o resultado do operador ternário (está sendo feito um teste lógico)
         String resposta = palpite==numero?"<html>ACERTOU</html>":"<html>ERROU! Pensei no número " + numero + "</html>";
-        
+        // lblBalao tem a sua fonte formatada
         lblBalao.setFont(new Font("Arial Black", Font.PLAIN, 16));
         lblBalao.setText(resposta);
     }//GEN-LAST:event_btnPalpiteActionPerformed

@@ -102,14 +102,15 @@ public class TelaIdade extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações do clique no botão btnCalc
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
-        // TODO add your handling code here:
+        // Variável "ano" recebe o valor digitado em txtAno, convertido para inteiro
         int ano   = Integer.parseInt(txtAno.getText());
         int idade = 2022 - ano;
-        
+        // lbltIdade exibe o texto da variável "idade" convertido para String
         lblIdade.setText(Integer.toString(idade));
         
-        //String sit = (idade>=18)?"MAIOR":"MENOR";
+        //Operador Ternário testa se idade é maior ou igual a 16 e menor que 18 OU maior que 70
         String sit = ((idade >= 16 && idade < 18) || (idade > 70))?"OPCIONAL":"OBRIGATÓRIO";
         lblSituacao.setText(sit);
     }//GEN-LAST:event_btnCalcActionPerformed

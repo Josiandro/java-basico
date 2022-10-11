@@ -18,7 +18,8 @@ public class OperadorTernario {
         int n1, n2, r;
         n1 = 14;
         n2 = 8;
-        //r = (n1>n2)?n1:n2;
+        
+        // Operador Ternário: n1>n2 r = o valor de n1+n2, senão r = o valor de n1-n2
         r = (n1>n2)?n1+n2:n1-n2;
         System.out.println(r);
     }

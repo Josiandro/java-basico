@@ -14,15 +14,20 @@ public class ComparacaoString {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Variáveis "nome1" e "nome2" String recebendo o mesmo texto
         String nome1 = "Josiandro";
         String nome2 = "Josiandro";
+        // Variável "nome3" criando objeto String (classe invólucro) recebendo o mesmo texto
         String nome3 = new String("Josiandro");
         String res;
         
-        //res = (nome1==nome2)?"igual":"diferente";
-        res = (nome1.equals(nome3))?"igual":"diferente"; //equals é um método que verificar se o conteúdo de um objeto é igual ao outro
-        System.out.println(res);
+        // Operador Ternário: Testa se nome1==nome2 e atribui para res "igual" ou "diferente"
+        res = (nome1==nome2)?"igual":"diferente";
+        System.out.println("nome1==nome2: " + res);
+        
+        // "nome1" e "nome3" possuem o mesmo conteúdos, mas não são variaveis iguais, o médoto equals compara o conteúdo dos objetos
+        res = (nome1.equals(nome3))?"igual":"diferente";
+        System.out.println("nome1.equals(nome3): " + res);
     }
     
 }
