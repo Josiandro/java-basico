@@ -124,12 +124,16 @@ public class TelaValores extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações do botão btnDividir
     private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirActionPerformed
-        // TODO add your handling code here:
+        // Variáveis "n" e "d" recebem os textos dos TextField e convertem para inteiro com o método Integer.parseInt
         int n = Integer.parseInt(txtNum.getText());
         int d = Integer.parseInt(txtDen.getText());
+        // Variável "div" recebe a divisão das  duas variáveis acima
         float div = n / d;
+        // Variável "res" recebe a raiz quadrada de n
         float res = (float) Math.sqrt(n);
+        // Os dois Label mostram os resultados, convertendo antes de Float para String
         lblDiv.setText(Float.toString(div));
         lblRes.setText(Float.toString(res));
     }//GEN-LAST:event_btnDividirActionPerformed

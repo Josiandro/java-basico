@@ -13,8 +13,11 @@ public class TelaCalculadora extends javax.swing.JFrame {
     /**
      * Creates new form TelaCalculadora
      */
+    
+    // Constructor (será explicado em programação OO) "inicializador"
     public TelaCalculadora() { //Construtor
         initComponents();
+        // panCalc recebe a visibilidade false, ou seja, não aparece
         panCalc.setVisible(false);
     }
 
@@ -197,17 +200,18 @@ public class TelaCalculadora extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações do clique no botão btnCalc
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
-        
+        // panCalc que iniciou como false no constructor, passa a ser true e é exibido
         panCalc.setVisible(true);
-        
+        // Vairiável "valor" recebe o valor informado no JSpinner, converte para String e depois para Integer
         int valor     = Integer.parseInt(txtValor.getValue().toString());
         int resto     = valor % 2;
         double cubo   = Math.pow(valor, 3);
         double raizq  = Math.sqrt(valor);
         double raizc  = Math.cbrt(valor);
         int absoluto  = Math.abs(valor);
-        
+        // Labels exibem textos com os resultados, cada um passando por conversões necessárias
         lblResultResto.setText(Integer.toString(resto));        
         lblResultCubo.setText(Double.toString(cubo));        
         lblResultRaiz.setText(String.format("%.2f",raizq));        
