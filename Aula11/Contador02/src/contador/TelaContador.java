@@ -74,15 +74,18 @@ public class TelaContador extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações do clique no botão btnContar
     private void btnContarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContarActionPerformed
         // TODO add your handling code here:
         int cc = 1;
         String contagem = "";
-        
+        // Repete o laço enquanto cc for menor ou igual a 10
         while (cc<=10) {
-           contagem += cc + " ";
+           // Vai incrementando a variável "contagem" com os valores
+           contagem += cc + " "; // contagem += cc é o mesmo que contagem = contagem + cc
            cc++;
         }
+        // lblContagem exibe os valores armazenados na variável "contagem"
         lblContagem.setText(contagem);
     }//GEN-LAST:event_btnContarActionPerformed
 

@@ -83,18 +83,22 @@ public class TelaFatorial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ação ao mexer no txtN
     private void txtNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_txtNStateChanged
-        // TODO add your handling code here:
+        // Variável n recebe o valor de txtN, depois de converter para String e passar para inteiro
         int n = Integer.parseInt(txtN.getValue().toString());        
         int f = 1;
         int c = n;
+        // String m recebe o valor de n, convertido de inteiro para String
         String m = Integer.toString(n);
         
+        // Enquanto c for maior que 1, repete o laço
         while (c>1) {
-            f *= c; 
-            c--;
-            m += "x" + c;
+            f *= c; // O mesmo que f = f*c
+            c--; // O mesmo que c = c-1
+            m += " x " + c; // Mostra a multiplicação que está sendo feita
         }
+        // lblFat exibe a multiplicação e concatena com o resultado convertido para String
         lblFat.setText(m + " = " + Integer.toString(f));
     }//GEN-LAST:event_txtNStateChanged
 

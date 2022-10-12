@@ -17,13 +17,17 @@ public class Contador01 {
         // TODO code application logic here
         int cc = 0;
         
+        // Repete o bloco enquanto (while) cc for menor que 10
         while (cc<10) {
+            // Incrementa cc com mais 1
             cc++;
+            // Se o teste do if for verdadeiro, é executado o "continue", interrompe o loço de repetição e começa executar o fluxo de novo
             if (cc == 2 || cc == 3 || cc == 4) {
-                continue; //Não executa o resto do comento, o continue interrompe o looping do enquanto
+                continue;
             }
+            // Se o teste do if for verdadeiro, é executado o "break", quebra o laço de repetição e vai para o final direto
             if (cc == 7) {
-                break; //Vai quebrar/encerrar o fluxo do laço
+                break;
             }
             System.out.println("Cambalhota " + cc);
         }
