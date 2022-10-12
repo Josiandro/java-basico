@@ -4,6 +4,7 @@
  */
 package vetor05;
 
+// Importação do pacote/biblioteca para trabalhar com vetores
 import java.util.Arrays;
 
 /**
@@ -19,7 +20,8 @@ public class Vetor05 {
         // TODO code application logic here
         int v[] = new int[20];
         
-        Arrays.fill(v, 0); //Preenche o vetor com um valor pré-definido
+        //Preenche o vetor com um valor pré-definido
+        Arrays.fill(v, 0); 
         
         for (int vetor:v) {
             System.out.print(vetor + " ");

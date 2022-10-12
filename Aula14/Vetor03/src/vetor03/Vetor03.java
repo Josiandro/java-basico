@@ -4,6 +4,7 @@
  */
 package vetor03;
 
+// Importação de pacote/biblioteca para trabalhar com vetores
 import java.util.Arrays;
 
 /**
@@ -19,10 +20,11 @@ public class Vetor03 {
         // TODO code application logic here
         double v[] = {3.5, 2.75, 9, -4.5};
         
-        Arrays.sort(v); // Classe que coloca o vetor em ordem de forma automática
+        // Classe com método que coloca o vetor em ordem de forma automática
+        Arrays.sort(v); 
         
-        //For ech / Para cada ele é específico para vetores
-        for (double valor:v) {
+        //For each / "Para cada" ele é específico para vetores
+        for (double valor:v) { // Vai percorrer o vetor para cada posição
             System.out.print(valor + " ");
         }
     }
