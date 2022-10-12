@@ -152,35 +152,45 @@ public class TelaContador extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Ações ao mexer no sliInicio
     private void sliInicioStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliInicioStateChanged
-        // TODO add your handling code here:
+        // Variável i recebe o valor do sliInicio, não converte pois já é inteiro
         int i = sliInicio.getValue();
+        // lblInicio exibe o valor da variável i, depois de converter para String
         lblInicio.setText(Integer.toString(i));
     }//GEN-LAST:event_sliInicioStateChanged
 
+    // Ações ao mexer no sliFim
     private void sliFimStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliFimStateChanged
-        // TODO add your handling code here:
+        // Variável f recebe o valor do sliFim, não converte pois já é inteiro
         int f = sliFim.getValue();
+        // lblFim exibe o valor da variável i, depois de converter para String
         lblFim.setText(Integer.toString(f));
     }//GEN-LAST:event_sliFimStateChanged
 
+    // Ações ao mexer no sliPasso
     private void sliPassoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliPassoStateChanged
-        // TODO add your handling code here:
+        // Variável f recebe o valor do sliPasso, não converte pois já é inteiro
         int p = sliPasso.getValue();
+        // lblPasso exibe o valor da variável i, depois de converter para String
         lblPasso.setText(Integer.toString(p));
     }//GEN-LAST:event_sliPassoStateChanged
 
+    // Ação do clique no botão btnCont
     private void btnContActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContActionPerformed
-        // TODO add your handling code here:
+        // Variaveis int recebendo os valores dos Slider
         int i = sliInicio.getValue();
         int f = sliFim.getValue();
         int p = sliPasso.getValue();
         
+        // Criado objeto lista para manipular o JList
         DefaultListModel lista = new DefaultListModel();
         
+        // Laço que vai adicionando elementos na lista
         for (int c = i; c <= f; c += p) {
             lista.addElement(c);
         }
+        // JList exibe elemntos da lista
         lstCont.setModel(lista);
     }//GEN-LAST:event_btnContActionPerformed
 

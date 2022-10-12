@@ -14,7 +14,12 @@ public class RepeticaoFor {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        /*
+         * Repetição com for
+         * cc começa valendo 0
+         * repete enquanto cc <= 100
+         * incrementa mais 10 em cc
+         */
         for (int cc=0; cc<=100; cc+=10) {
             System.out.println(cc);
         }
