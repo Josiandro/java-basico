@@ -16,11 +16,11 @@ public class Repeticao01 {
     public static void main(String[] args) {
         // TODO code application logic here
         int cc = 0;
-        
-        do { // do = faça
+        // Inicia laço de repetição com teste lógico no final (do = faça)
+        do {
             System.out.println("Cabalhota " + cc);
             cc++;
-        } while (cc<4); // Teste lógico do enquanto é feito no final
+        } while (cc<4); //Repete o laço enquando cc for menor que 4
     }
     
 }

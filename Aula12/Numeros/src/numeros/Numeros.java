@@ -4,6 +4,7 @@
  */
 package numeros;
 
+// Importa pacote/biblioteca para entrada de dados
 import java.util.Scanner;
 
 /**
@@ -19,9 +20,9 @@ public class Numeros {
         // TODO code application logic here
         int n, s=0;
         String resp = "";
-        
+        // Criação do objeto teclado
         Scanner teclado = new Scanner(System.in);
-        
+        // Inicia laço de repetição com teste no final
         do {
             System.out.print("Digite um número: ");
             n = teclado.nextInt();
@@ -29,7 +30,7 @@ public class Numeros {
             
             System.out.print("Quer continuar? [S/N]");
             resp = teclado.next();
-        } while (resp.equals("S") || resp.equals("s"));
+        } while (resp.equals("S") || resp.equals("s")); // Repete enquanto a resposta for S ou s.
         System.out.println("A soma de todos os valores é " + s);
     }
     
