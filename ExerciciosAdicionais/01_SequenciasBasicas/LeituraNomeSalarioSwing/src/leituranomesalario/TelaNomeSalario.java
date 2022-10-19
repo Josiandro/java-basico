@@ -91,16 +91,17 @@ public class TelaNomeSalario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmaActionPerformed
-        
+        // Criação das variáveis
         String nome;
         float salario;
-        
+        // nome recebe o texto de txtNome
         nome = txtNome.getText();
+        // salario recebe o texto de txtSalario convertido para float
         salario = Float.parseFloat(txtSalario.getText());
-        
+        // lblMensagem exibe a mensagem com nome e salário
         lblMensagem.setText("O funcionário " + nome + " tem um salário de R$ " 
                 + salario + " em Junho.");
-        
+        // zera txtNome e txtSalario
         txtNome.setText("");
         txtSalario.setText("");
     }//GEN-LAST:event_btnConfirmaActionPerformed
